@@ -10,6 +10,7 @@
 <body>
 
 <!-- NAVBAR -->
+
 <nav>
     <div class="logo">Sanchit Singh</div>
     <ul>
@@ -111,9 +112,9 @@
 <!-- CONTACT -->
 <section id="contact" class="section">
     <h2>Contact Me</h2>
-    <form action="#" method="POST" class="contact-form">
+    <form action="https://formspree.io/f/mldpvbjp" method="POST" class="contact-form">
         <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="email" name="_replyto" placeholder="Your Email" required>
         <textarea name="message" placeholder="Your Message" required></textarea>
         <button type="submit" class="btn">Send Message</button>
     </form>
@@ -123,6 +124,7 @@
         <a href="mailto:youremail@example.com">Email</a>
     </div>
 </section>
+
 
 <!-- BACK TO TOP -->
 <button id="backToTop">&#8679;</button>
@@ -135,3 +137,26 @@
 <script src="js/script.js"></script>
 </body>
 </html>
+<p id="form-success" style="display:none; color:green;">Thank you! Your message has been sent.</p>
+
+<script>
+const form = document.querySelector('.contact-form');
+const successMsg = document.getElementById('form-success');
+
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const formData = new FormData(form);
+    fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+        if(response.ok){
+            form.reset();
+            successMsg.style.display = 'block';
+        }
+    })
+    .catch(error => { console.error(error); });
+});
+</script>

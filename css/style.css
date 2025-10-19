@@ -323,3 +323,36 @@ header, footer {
         font-size: 0.85rem;
     }
 }
+/* Navbar */
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #1e3a8a; /* deep royal blue */
+    position: sticky;
+    top:0;
+    z-index: 100;
+}
+nav .logo { font-weight: 700; font-size:1.5rem; color:#fff; }
+nav ul li a { color:#fff; }
+nav ul li a:hover { color:#3b82f6; transform: scale(1.05); }
+
+/* Buttons (accent) */
+.hero-buttons .btn, .contact-form button.btn {
+    background-color: #3b82f6; /* bright blue */
+    color: #fff;
+}
+.hero-buttons .btn:hover, .contact-form button.btn:hover {
+    background-color: #2563eb; /* darker blue on hover */
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #1e3a8a; /* deep royal blue */
+    padding: 20px 0;
+    text-align: center;
+    color: #3b82f6; /* accent text color */
+}
