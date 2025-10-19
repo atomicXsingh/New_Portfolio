@@ -247,3 +247,79 @@ header, footer {
     background: linear-gradient(135deg, #fff8e1, #ffe0b2);
     color: #5d4037;
 }
+/* 📱 Mobile Responsiveness */
+@media (max-width: 992px) {
+    nav {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .hero-left h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-left h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero-right img {
+        width: 200px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .skills-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .skills-grid span {
+        margin: 6px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li {
+        margin: 5px;
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        font-size: 0.85rem;
+    }
+}
